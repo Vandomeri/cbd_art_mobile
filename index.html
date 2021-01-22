@@ -5,10 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/alertify.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bungee+Outline&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <title>CBD OIL HEMP</title>
 </head>
 
 <body>
@@ -53,13 +55,14 @@
 
                 <div class="rating flex">
                     <img src="assets/images/Rating.png" alt="">
-                    <a href="">1056 rewiews</a>
+                    <a href="#reviews">206 rewiews</a>
                 </div>
 
                 <div class="offer_price flex">
                     <div class="price_main">€ 49.99</div>
                     <div class="price_old">€ 99.99</div>
                     <div class="price_discount">50%</div>
+
                 </div>
 
                 <div class="specials">
@@ -68,23 +71,63 @@
                         <p>Free Shipping</p>
                     </div>
                     <div class="special_item flex">
-                        <img src="assets/images/discount.png" alt="">
-                        <p>20% discount for the 2nd item</p>
-                    </div>
-                    <div class="special_item flex">
-                        <img src="assets/images/gift.png" alt="">
-                        <p>CBD sweets gift when you buy
-                            2 items</p>
-                    </div>
-                    <div class="special_item flex">
                         <img src="assets/images/cash-on-delivery.png">
                         <p>You pay for the item after delivery and your verification</p>
                     </div>
+                    <div class="special_item flex">
+                        <img src="assets/images/discount.png" alt="">
+                        <p>20% discount for the 2nd item</p>
+                    </div>
+
+
+
+                    <div class="special_gift">
+
+                        <div style="visibility: hidden; position: absolute; width: 0px; height: 0px;">
+                            <svg xmlns="http://www.w3.org/2000/svg">
+                                <symbol viewBox="0 0 24 24" id="expand-more">
+                                    <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z" />
+                                    <path d="M0 0h24v24H0z" fill="none" />
+                                </symbol>
+                                <symbol viewBox="0 0 24 24" id="close">
+                                    <path
+                                        d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+                                    <path d="M0 0h24v24H0z" fill="none" />
+                                </symbol>
+                            </svg>
+                        </div>
+
+
+                        <details>
+                            <summary>
+                                <span>Wanna pay less? Special offer for citizens of <span
+                                        id="user-country"></span></span>
+                                <svg class="control-icon control-icon-expand" width="24" height="24"
+                                    role="presentation">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#expand-more" />
+                                </svg>
+                                <svg class="control-icon control-icon-close" width="24" height="24" role="presentation">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close" />
+                                </svg>
+                            </summary>
+                            <p class="gift_info">Take 2 items of LE-KKU CBD HEMP OIL with discount and get Dark
+                                Chocolate with CBD
+                                HELP OIL as a gift!
+
+                            <p class="image_gift-offer"><img src="assets/images/giftoffer.png" alt=""></p>
+                            </p>
+                        </details>
+
+                    </div>
+
+
+
+
                 </div>
 
                 <div class="block_title uppercase" id="order">Order now</div>
 
-                <form enctype="multipart/form-data" method="post" id="form" onsubmit="send(event, 'send.php')">
+                <form enctype="" method="" id="form">
                     <span>Name</span> <br>
                     <input type="text" name="name" required placeholder="John Doe" x-autocompletetype="name"><br>
                     <span>Phone</span><br>
@@ -92,14 +135,14 @@
                     <span>Email</span><br>
                     <input type="email" name="email" required placeholder="email@example.com"
                         x-autocompletetype="email">
-                    <input class="button" type="submit" value="ORDER">
+                    <input id="orderbtn" class="button" type="submit" value="ORDER">
                 </form>
 
                 <div class="trust"><img src="assets/images/trust.png" alt=""></div>
             </div>
 
             <div class="block_title">How to use CBD Oil</div>
-            <picture class="gif">
+            <picture class="gif" loading="lazy">
                 <source type="image/webp" srcset="assets/images/howto.webp">
                 <source type="image/gif" srcset="assets/images/land_gif.gif">
                 <img src="assets/images/land_gif.gif" alt="My Image">
@@ -138,9 +181,7 @@
                     <div class="benefit_item">
                         <img src="assets/images/neuroprotective.png" alt="">
                         <p class="benefit_title">Neuroprotective</p>
-                        <p>CBD has been shown to exhibit neuroprotective properties, reducing neuroinflammation,
-                            improving
-                            cognitive function, and promoting neuroplasticity, helping to repair damaged brain cells.
+                        <p>You will forget less, remember more and absorb information better.
                         </p>
                     </div>
 
@@ -152,13 +193,16 @@
                         </p>
                     </div>
 
+
                     <div class="benefit_item">
-                        <img src="assets/images/joint pain.png" alt="">
-                        <p class="benefit_title">Joint Pain</p>
-                        <p>Studies have shown that CBD may help reduce chronic pain by impacting endocannabinoid
-                            receptor activity, reducing inflammation and interacting with neurotransmitters.
+                        <img src="assets/images/healthy_heart.png" alt="">
+                        <p class="benefit_title">Healthy Heart</p>
+                        <p>Recent research has linked CBD with heart and circulatory system benefits, including the
+                            ability to lower high blood pressure.
                         </p>
                     </div>
+
+
 
                     <div class="benefit_item">
                         <img src="assets/images/reduce_cigarette.png" alt="">
@@ -168,13 +212,16 @@
                         </p>
                     </div>
 
+
                     <div class="benefit_item">
-                        <img src="assets/images/healthy_heart.png" alt="">
-                        <p class="benefit_title">Healthy Heart</p>
-                        <p>Recent research has linked CBD with heart and circulatory system benefits, including the
-                            ability to lower high blood pressure.
+                        <img src="assets/images/joint pain.png" alt="">
+                        <p class="benefit_title">Joint Pain</p>
+                        <p>Studies have shown that CBD may help reduce chronic pain by impacting endocannabinoid
+                            receptor activity, reducing inflammation and interacting with neurotransmitters.
                         </p>
                     </div>
+
+
 
                     <div class="benefit_item">
                         <img src="assets/images/anxiety_relief.png" alt="">
@@ -206,7 +253,7 @@
             </div>
         </div>
 
-        <div class="container">
+        <div class="container faq_items">
             <div class="block_title faq">FAQ</div>
             <details open>
                 <summary>What Are The Benefits Of CBD?</summary>
@@ -285,7 +332,7 @@
 
 
         <div class="container">
-            <div class="block_title marg">
+            <div class="block_title marg" id="reviews">
                 Reviews
             </div>
             <div class="col-md-12" id="fbcomment">
@@ -333,8 +380,7 @@
                             <!-- Start List Comment 1 -->
                             <li class="box_result row">
                                 <div class="avatar_comment col-md-1">
-                                    <img src="https://static.xx.fbcdn.net/rsrc.php/v1/yi/r/odA9sNLrE86.jpg"
-                                        alt="avatar" />
+                                    <img src="assets/images/face1.jpg" alt="avatar" />
                                 </div>
                                 <div class="result_comment col-md-11">
                                     <h4>Kathleen C.</h4>
@@ -352,11 +398,10 @@
                                     <ul class="child_replay">
                                         <li class="box_reply row">
                                             <div class="avatar_comment col-md-1">
-                                                <img src="https://static.xx.fbcdn.net/rsrc.php/v1/yi/r/odA9sNLrE86.jpg"
-                                                    alt="avatar" />
+                                                <img src="assets/images/face3.jpg" alt="avatar" />
                                             </div>
                                             <div class="result_comment col-md-11">
-                                                <h4>Janell K.</h4>
+                                                <h4>Edward K.</h4>
                                                 <p>Great product 👍🏻👍🏻</p>
                                                 <div class="tools_comment">
                                                     <a class="like">Like</a>
@@ -377,8 +422,7 @@
                             <!-- Start List Comment 2 -->
                             <li class="box_result row">
                                 <div class="avatar_comment col-md-1">
-                                    <img src="https://static.xx.fbcdn.net/rsrc.php/v1/yi/r/odA9sNLrE86.jpg"
-                                        alt="avatar" />
+                                    <img src="assets/images/face2.jpg" alt="avatar" />
                                 </div>
                                 <div class="result_comment col-md-11">
                                     <h4>Liz J.</h4>
@@ -405,42 +449,20 @@
 
     </main>
 
+    <footer class="footer">
+        © 2021 All Rights Reserved.
+    </footer>
+
+    <a id="buttontotop"></a>
+
     <div class="topbar">
         New year sale extended. Last chance to get discount. <p id="counter"></p>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://api-maps.yandex.ru/2.0-stable/?load=package.standard&amp;lang=en-US"
+        type="text/javascript"></script>
+    <script src="assets/js/alertify.min.js"></script>
     <script src="assets/js/script.js"></script>
-
-    <script>
-        // Set the date we're counting down to
-        var countDownDate = new Date().getTime() + 100000000;
-
-        // Update the count down every 1 second
-        var x = setInterval(function () {
-
-            // Get todays date and time
-            var now = new Date().getTime();
-
-            // Find the distance between now an the count down date
-            var distance = countDownDate - now;
-
-            // Time calculations for days, hours, minutes and seconds
-            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            // Output the result in an element with id="demo"
-            document.getElementById("counter").innerHTML = days + "d " + hours + "h "
-                + minutes + "m " + seconds + "s ";
-
-            // If the count down is over, write some text 
-            if (distance < 0) {
-                clearInterval(x);
-                document.getElementById("counter").innerHTML = "EXPIRED";
-            }
-        }, 1000);
-    </script>
 
 </body>
 

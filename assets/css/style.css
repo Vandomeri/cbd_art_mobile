@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   padding: 0;
   margin: 0;
@@ -153,12 +154,13 @@ h6 {
 .bottle_block-text {
   font-family: "Bungee Outline", cursive;
   font-size: 30px;
-  line-height: 36px;
-  max-width: 110px;
+  line-height: 42px;
+  border: 1px solid #ffffff;
+  max-width: 140px;
   width: 100%;
   text-align: center;
   color: #ffffff;
-  margin-top: 270px;
+  margin-top: 250px;
   margin-left: auto;
   -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
           animation: heartbeat 1.5s ease-in-out infinite both;
@@ -461,7 +463,7 @@ h6 {
   background-position: center center;
 }
 
-summary {
+.faq_items summary {
   font-size: 1.25rem;
   font-weight: 600;
   background-color: #fff;
@@ -475,25 +477,25 @@ summary {
   position: relative;
 }
 
-details > summary::after {
+.faq_items details > summary::after {
   position: absolute;
   content: "+";
   right: 20px;
   color: #5fad56;
 }
 
-details[open] > summary::after {
+.faq_items details[open] > summary::after {
   position: absolute;
   content: "-";
   right: 20px;
   color: #5fad56;
 }
 
-details > summary::-webkit-details-marker {
+.faq_items details > summary::-webkit-details-marker {
   display: none;
 }
 
-details[open] summary ~ * {
+.faq_items details[open] summary ~ * {
   -webkit-animation: sweep 0.5s ease-in-out;
           animation: sweep 0.5s ease-in-out;
 }
@@ -591,6 +593,7 @@ details[open] summary ~ * {
 }
 
 .avatar_comment {
+  margin: 3px 0;
   display: block;
 }
 
@@ -813,4 +816,151 @@ details[open] summary ~ * {
   font-size: 14px;
   text-align: center;
   margin-top: 5px;
+}
+
+.footer {
+  text-align: center;
+  padding: 10px 0;
+  background-color: #5fad56;
+}
+
+#buttontotop {
+  display: inline-block;
+  background-color: #5fad56;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  -webkit-transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+
+#buttontotop::after {
+  content: "⇧";
+  font-weight: bold;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: #fff;
+}
+
+#buttontotop:hover {
+  cursor: pointer;
+  background-color: #333;
+}
+
+#buttontotop:active {
+  background-color: #555;
+}
+
+#buttontotop.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.special_gift {
+  margin-top: 25px;
+}
+
+.special_gift details {
+  width: 100%;
+  min-height: 5px;
+  max-width: 700px;
+  padding: 10px 15px;
+  margin: 0 auto;
+  position: relative;
+  font-size: 16px;
+  border: 1px solid #5fad56;
+  border-radius: 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.special_gift details + details {
+  margin-top: 20px;
+}
+
+.special_gift details[open] {
+  min-height: 50px;
+  background-color: #f6f7f8;
+  -webkit-box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
+          box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
+}
+
+.special_gift details p {
+  color: #000000;
+  font-weight: 300;
+  line-height: 1.3;
+}
+
+.special_gift summary {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.special_gift summary:focus {
+  outline: none;
+}
+
+.special_gift summary:focus::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.special_gift summary::-webkit-details-marker {
+  display: none;
+}
+
+.special_gift .control-icon {
+  fill: #5fad56;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  pointer-events: none;
+}
+
+.special_gift .control-icon-close {
+  display: none;
+}
+
+.special_gift details[open] .control-icon-close {
+  display: initial;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.special_gift details[open] .control-icon-expand {
+  display: none;
+}
+
+.gift_info {
+  margin-top: 10px;
+}
+
+.image_gift-offer img {
+  width: 325px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 10px;
 }

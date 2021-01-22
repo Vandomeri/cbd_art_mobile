@@ -1,8 +1,6 @@
-(function () {
-    $('.flex-container').waitForImages(function () {
-        $('.spinner').fadeOut();
-    }, $.noop, true);
+//Slider
 
+(function () {
     $(".flex-slide").each(function () {
         $(this).hover(function () {
             $(this).find('.flex-title').css({
@@ -23,6 +21,9 @@
         })
     });
 })();
+
+
+// Comments
 
 
 function submit_comment() {
@@ -125,3 +126,62 @@ function submit_reply() {
 function cancel_reply() {
     $('.reply_comment').remove();
 }
+
+//To top Button
+
+jQuery(document).ready(function () {
+    var btn = $('#buttontotop');
+    $(window).scroll(function () {
+        if ($(window).scrollTop() > 1500) {
+            btn.addClass('show');
+        } else {
+            btn.removeClass('show');
+        }
+    });
+    btn.on('click', function (e) {
+        e.preventDefault();
+        $('html, body').animate({ scrollTop: 1200 }, '1500');
+    });
+});
+
+
+//Timer
+
+var countDownDate = new Date().getTime() + 100000000;
+
+
+var x = setInterval(function () {
+
+
+    var now = new Date().getTime();
+
+    var distance = countDownDate - now;
+
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("counter").innerHTML = days + "d " + hours + "h "
+        + minutes + "m " + seconds + "s ";
+
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("counter").innerHTML = "EXPIRED";
+    }
+}, 1000);
+
+
+window.onload = function () {
+    jQuery("#user-country").text(ymaps.geolocation.country);
+}
+
+jQuery(document).ready(function () {
+    var orderbtn = $('#orderbtn');
+    orderbtn.on('click', function (e) {
+        alertify.success('Thanks for your order, the manager will contact you soon');
+    });
+});
+
+
+
