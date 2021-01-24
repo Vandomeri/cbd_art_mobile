@@ -173,7 +173,7 @@ var x = setInterval(function () {
 
 
 window.onload = function () {
-    jQuery("#user-country").text(ymaps.geolocation.country);
+    jQuery("#user-country").text(ymaps.geolocation.city);
 }
 
 jQuery(document).ready(function () {
