@@ -767,6 +767,10 @@ h6 {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  
+  .faq_items {
+    padding-top: 60px;
+  }
 }
 
 .flex-slide {
